@@ -1,3 +1,4 @@
+
 #!/bin/bash -x
 
 
@@ -54,3 +55,8 @@ array1[$i]=${array[$i]}
 done
 
 echo ${array1[@]}
+
+
+arr=($(for i in "${array[@]}"; do echo $i;done | sort -nr))
+
+echo "descending order" ${arr[@]}
