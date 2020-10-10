@@ -1,4 +1,3 @@
-
 #!/bin/bash -x
 
 
@@ -28,7 +27,6 @@ echo $res4
 declare -A array
 
 j=1
-
 for i in res1 res2 res3 res4
 
 do
@@ -60,3 +58,10 @@ echo ${array1[@]}
 arr=($(for i in "${array[@]}"; do echo $i;done | sort -nr))
 
 echo "descending order" ${arr[@]}
+
+
+arr=($(for i in "${array[@]}"; do echo $i;done | sort -n))
+
+echo "ascending order" ${arr[@]}
+
+
